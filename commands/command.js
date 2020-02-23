@@ -2,12 +2,13 @@ const config = require('../config.json');
 
 // test commands
 const testUser = require('./test/testUser');
+const testMessages = require('./test/testMessages');
 // dm commands
 
 // public commands
 
 const normalCommands = [];
-const testCommands = [testUser];
+const testCommands = [testUser, testMessages];
 const dmcommands = [];
 
 // create an array so we can push testing commands in when it's enabled
