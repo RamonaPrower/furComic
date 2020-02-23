@@ -1,0 +1,17 @@
+{
+    "emotions": [["angry", "https://cdn.discordapp.com/attachments/678605878743793704/678897272045699105/angry.png"], ["bored", "https://cdn.discordapp.com/attachments/678605878743793704/678897302508666910/bored.png"], ["happy", "https://cdn.discordapp.com/attachments/678605878743793704/678897361094705172/HAPPY.png"], ["hi", "https://cdn.discordapp.com/attachments/678605878743793704/678897388986957825/hi.png"], ["idle", "https://cdn.discordapp.com/attachments/678605878743793704/678897427071107072/idle.png"], ["love", "https://cdn.discordapp.com/attachments/678605878743793704/678897458394431508/love.png"], ["me", "https://cdn.discordapp.com/attachments/678605878743793704/678897486206861322/me.png"], ["question", "https://cdn.discordapp.com/attachments/678605878743793704/678897514866409472/question.png"], ["sad", "https://cdn.discordapp.com/attachments/678605878743793704/678897540892065797/sad.png"], ["scared", "https://cdn.discordapp.com/attachments/678605878743793704/678897568935313408/scared.png"], ["smug", "https://cdn.discordapp.com/attachments/678605878743793704/678897599415058432/smug.png"], ["walk", "https://cdn.discordapp.com/attachments/678605878743793704/678897629072982026/walk.png"], ["yell", "https://cdn.discordapp.com/attachments/678605878743793704/678897660526198794/yell.png"], ["you", "https://cdn.discordapp.com/attachments/678605878743793704/678897690041516032/you.png"]],
+    "triggers": {
+        "angry": ["grr", "fuck", "damned", "goddamned", "shit", "angry", "upset", "crap", "😬", "😐", "😠", "😤", ">_<"],
+        "bored": ["sigh", "boring", "bored", "💤", "😴"],
+        "happy": ["^-^", "^_^", "yay", "happy", "awesome", "awesome", "great", "good", "😀", "😬", "😁", "😂", "😃", "😄", "😅", "😆", "😉", "😊", "🙂", "😋", "😌", "😜", "😝", "😛", "😏"],
+        "hi": ["Hello", "Hi", "Yo", "Hey", "Heya"],
+        "love": [":P", "<3", "❤️", "💛", "💙", "💜", "💔", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "💟"],
+        "me": ["me", "myself", "i'm", "i am", "im"],
+        "question": ["what", "wat", "huh", "is this"],
+        "sad": ["-_-", "sad", "bad", "😧", "😢", "😓", "😭", "😰"],
+        "scared": ["ack", "arg", "scared", "uh oh", "😱", "😳"],
+        "smug": ["of course", "obviously", "i know", "duh", "pff"],
+        "walk": ["bye", "later"],
+        "you": ["you", "you're", "you are", "youre"]
+    }
+}

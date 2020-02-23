@@ -1,0 +1,5 @@
+{
+    "info": ["this is the normal info box"],
+    "firstTime": ["this is the first time box"],
+    "upload": ["This is a description of the upload proceedure", "upload [emotion] + add image"]
+}
