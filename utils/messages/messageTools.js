@@ -2,6 +2,7 @@ const messageLink = require('./messageLink');
 const Discord = require('discord.js');
 const fursonaTools = require('../fursona/fursona');
 const fursonaJSON = require('../../strings/fursona');
+const { emotionDecider } = require('../emotions/emotionHandling');
 
 module.exports = {
     /**
@@ -29,6 +30,10 @@ module.exports = {
         }
         return messages;
     },
+    /**
+     * Parses all speakers, and pushes speaker objects and their fursonas to a collection
+     * @param {Collection} messages Discord collection of messages
+     */
     async speakerParser(messages) {
         const speakers = new Discord.Collection;
         const messageArr = messages.array();
@@ -46,5 +51,23 @@ module.exports = {
             }
         }
         return speakers;
+    },
+    /**
+     * Returns an array with objects containing each message in the script
+     * @param {Collection} messages Discord Collection of messages
+     */
+    scriptParser(messages) {
+        // preparing the conversation parser
+        const script = new Array;
+        // messages come in backwards, we reverse them here
+        const reversedArr = messages.array().reverse();
+        for (const message of reversedArr) {
+            const entry = {};
+            entry.message = message.content;
+            entry.author = message.author.id;
+            entry.emotion = emotionDecider(message.content);
+            script.push(entry);
+        }
+        return script;
     },
 };
