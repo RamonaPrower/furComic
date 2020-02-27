@@ -2,6 +2,7 @@
 const messageTools = require('../../utils/messages/messageTools');
 const scriptHandler = require('../../utils/script/script');
 const panelGeneration = require('../../utils/panel/panelGeneration');
+const comicGen = require('../../utils/comic/comic');
 const Discord = require('discord.js');
 // exports
 module.exports = {
@@ -13,7 +14,8 @@ module.exports = {
 		console.log(speakers);
 		const script = scriptHandler.makeScript(messages);
 		const panels = await panelGeneration.generatePanels(script, speakers);
-		const attachment = new Discord.Attachment(panels[1].toBuffer(), 'testPanel.png');
+		const comic = await comicGen.createComic(panels, speakers);
+		const attachment = new Discord.Attachment(comic, 'testcomic.png');
 		message.channel.send(attachment);
 
 		message.channel.stopTyping();

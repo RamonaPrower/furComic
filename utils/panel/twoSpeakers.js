@@ -15,6 +15,7 @@ module.exports = {
             const canvas = Canvas.createCanvas(300, 300);
             const ctx = canvas.getContext('2d');
             common.drawBackground(ctx);
+            common.drawFrontBackground(ctx, canvas);
             common.drawBorder(ctx, canvas);
             this.drawEmotions(ctx, canvas, speakers, scriptPanel).then(() => {
                 let lastLineCount = 0;

@@ -59,6 +59,16 @@ module.exports = {
     ctx.fillStyle = '#FFFFFF';
     ctx.fillRect(0, 0, double ? 600 : 300, 300);
   },
+  drawFrontBackground(ctx, canvas) {
+    ctx.save();
+    ctx.beginPath();
+    this.borderPath(ctx, canvas);
+    ctx.closePath();
+    ctx.clip();
+    ctx.fillStyle = '#d4fbff';
+    ctx.fillRect(0, 0, 300, 300);
+    ctx.restore();
+  },
   /**
    * A quick border path to summon
    * @param {ctx} ctx

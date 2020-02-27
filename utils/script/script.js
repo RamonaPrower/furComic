@@ -13,8 +13,8 @@ module.exports = {
             entry.author = lineScript[i].author;
             entry.emotion = lineScript[i].emotion;
             entries.push(entry);
-            if (lineScript.length != i) {
-                if (lineScript[i].author != lineScript[i + 1].author) {
+            if (lineScript.length != i && lineScript.length > 1) {
+                if (lineScript[i].author != lineScript[i + 1].author && lineScript[i].message.length <= 40) {
                     const bonusEntry = {};
                     panel.speakers = 2;
                     bonusEntry.line = lineScript[i + 1].message;

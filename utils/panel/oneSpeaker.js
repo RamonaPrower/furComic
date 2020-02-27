@@ -17,6 +17,7 @@ module.exports = {
       const canvas = Canvas.createCanvas(300, 300);
       const ctx = canvas.getContext('2d');
       common.drawBackground(ctx);
+      common.drawFrontBackground(ctx, canvas);
       this.drawEmotion(ctx, canvas, speakers, scriptPanel).then(() => {
         common.drawBorder(ctx, canvas);
         this.renderLines(ctx, lines, dynamFontSize);
